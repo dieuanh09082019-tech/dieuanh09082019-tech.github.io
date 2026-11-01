@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Fanpage Manager</title>
+</head>
+<body style="font-family: system-ui, sans-serif; padding: 24px">
+<p>Đang quay về Fanpage Manager trên máy của bạn…</p>
+<p><a id="back" href="http://localhost:3000/">Bấm vào đây nếu không tự chuyển</a></p>
+<script>
+  // TikTok chỉ chấp nhận redirect HTTPS, nên trang này chuyển tiếp mã đăng nhập về ứng dụng chạy trên máy
+  var target = 'http://localhost:3000/auth/tiktok/callback' + location.search;
+  document.getElementById('back').href = target;
+  location.replace(target);
+</script>
+</body>
+</html>
